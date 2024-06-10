@@ -1,26 +1,27 @@
 {
-  "name": "whatsapp-bot (hermit-md)",
+  "name": "𝐃𝚪𝚫𝐆𝚯𝚴 𝚳𝐃",
   "description": " Whatsapp bot.",
   "keywords": [
-    "whatsapp bot"
+    "Best whatsapp bot made by Confronter"
   ],
-  "repository": "https://github.com/A-d-i-t-h-y-a-n/hermit-md",
+  "repository": "https://github.com/confronter/DRAGON-MD",
+  "logo": "https://telegra.ph/file/65af8f402fe120efee67d.jpg",
   "stack": "container",
   "env": {
     "SESSION_ID": {
       "description": "session id",
-      "required": false,
+      "required": true,
       "value": ""
     },
     "SUDO": {
-      "description": "admin",
+      "description": "owner number of the bot ex 254796283064,254111766934",
       "required": true,
-      "value": "null"
+      "value": ""
     },
     "MODE": {
-      "description": "mode",
+      "description": "mode public or private",
       "required": true,
-      "value": "public"
+      "value": "private"
     },
     "ALWAYS_ONLINE": {
       "description": "show bot number last seen as online",
@@ -48,27 +49,52 @@
     "BOT_INFO": {
       "description": "botname;ownername;ownernumber;image url",
       "required": true,
-      "value": "𝛨𝛯𝑅𝛭𝛪𝑇;𝛥𝐷𝛪𝑇𝛨𝑌𝛥𝛮;972528277755;https://i.imgur.com/6oRG106.jpeg"
+      "value": "𝕮𝖔𝖓𝖋𝖗𝖔𝖓𝖙𝖊𝖗;𝕱𝖗𝖆𝖓𝖐;254111766934;https://telegra.ph/file/6bad7a0c0ee5340ace1dd.jpg"
     },
     "STICKER_DATA": {
       "description": "sticker package name",
-      "required": false,
-      "value": "𝛨𝛯𝑅𝛭𝛪𝑇;𝛥𝐷𝛪𝑇𝛨𝑌𝛥𝛮"
+      "required": true,
+      "value": "𝕮𝖔𝖓𝖋𝖗𝖔𝖓𝖙𝖊𝖗"
     },
     "AUDIO_DATA": {
       "description": "audio package name",
-      "required": false,
-      "value": "𝛨𝛯𝑅𝛭𝛪𝑇;𝛥𝐷𝛪𝑇𝛨𝑌𝛥𝛮;https://i.imgur.com/6oRG106.jpeg"
+      "required": true,
+      "value": "𝕮𝖔𝖓𝖋𝖗𝖔𝖓𝖙𝖊𝖗;𝕱𝖗𝖆𝖓𝖐;https://telegra.ph/file/2f8b1ef450d2fbc783d7d.jpg"
     },
-    "READ_COMMAND": {
-      "description": "Read all commands",
+    "READ_MSG": {
+      "description": "Read all messages",
       "required": false,
       "value": "false"
+    },
+    "AUTO_STATUS_VIEW": {
+      "description": "automatic read status",
+      "required": false,
+      "value": "false"
+    },
+    "REJECT_CALL": {
+      "description": "automatic reject call",
+      "required": false,
+      "value": "false"
+    },
+    "WARN": {
+      "description": "warn count",
+      "required": false,
+      "value": "4"
+    },
+    "SONG_THUMBNAIL": {
+      "description": "show youtube video thumbnail in song cmd",
+      "required": false,
+      "value": "false"
+    },
+    "ERROR_MESSAGE": {
+      "description": "get error alert",
+      "required": false,
+      "value": "true"
     }
   },
-  "addons": [
-    {
-      "plan": "heroku-postgresql"
-    }
+    "addons": [{ "plan": "heroku-postgresql:essential-1" }],
+  "buildpacks": [
+    { "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" },
+    { "url": "https://github.com/carlosdommor/heroku-buildpack-ffmpeg-latest" }
   ]
 }
